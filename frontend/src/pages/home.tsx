@@ -28,14 +28,19 @@ export const HomePageBadge = Shade<BadgeProps>({
         <style>{`
 
         shade-home-page-badge > div {
-          box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 20px;
+          box-shadow:  1px 1px 20px rgba(0, 0, 0, 0.4);
           border-radius: 14px;
           overflow: hidden;
-          margin: 1em
+          margin: 1em;
+          transition: box-shadow 500ms;
+        }
+        shade-home-page-badge > div:hover {
+          box-shadow:  1px 1px 3px rgba(0, 0, 0, 0.6);
         }
 
         shade-home-page-badge > div img {
           filter: sepia(0) contrast(1);
+          border-radius: 14px;
         }
         
         shade-home-page-badge > div:hover img {
@@ -52,8 +57,7 @@ export const HomePageBadge = Shade<BadgeProps>({
           transition: opacity 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), bottom 300ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
         }
 
-        shade-home-page-badge:hover .badge-text-section {
-          top: auto;
+        shade-home-page-badge > div:hover .badge-text-section {
           bottom: 0;
           opacity: 1;
         }
