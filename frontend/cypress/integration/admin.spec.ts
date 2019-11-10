@@ -1,7 +1,7 @@
 describe("Example Application", () => {
   it("Login and logout roundtrip", () => {
     cy.log("Visiting Home...");
-    cy.visit("/");
+    cy.visit("/admin");
     cy.log("Checking Login form...");
     cy.get("shade-login>div>form").should("be.visible");
     cy.get("shade-login input[type=text]")
