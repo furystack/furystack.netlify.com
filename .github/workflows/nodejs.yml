@@ -17,10 +17,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
-      run: |
-        npm install yarn -g
-        yarn install
-        yarn test:cypress
+    - name: install YARN
+      run: npm install yarn -g
+    - name: install dependencies
+      run:  yarn install
+    - name: Cypress test
+      run:  yarn test:cypress
       env:
         CI: true
