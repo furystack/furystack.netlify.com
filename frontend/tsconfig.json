@@ -54,5 +54,5 @@
     "pretty": true,
     "skipLibCheck": false
   },
-  "include": ["src"]
+  "include": ["src", "typings"]
 }

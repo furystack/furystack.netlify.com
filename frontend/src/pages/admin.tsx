@@ -1,10 +1,13 @@
-import { createComponent, Shade } from "@furystack/shades";
+import { Shade, createComponent } from "@furystack/shades";
 import { SessionService, sessionState } from "../services/session";
 import { User } from "../odata/entity-types";
-import { Init, HelloWorld, Offline, Login } from "../pages";
+import { HelloWorld } from "./hello-world";
+import { Offline } from "./offline";
+import { Login } from "./login";
+import { Init } from "./init";
 
-export const Body = Shade({
-  shadowDomName: "shade-app-body",
+export const AdminRoot = Shade({
+  shadowDomName: "shade-admin-root",
   initialState: {
     sessionState: "initial" as sessionState,
     currentUser: null as User | null
@@ -23,18 +26,8 @@ export const Body = Shade({
   },
   render: ({ getState }) => {
     return (
-      <div
-        id="Body"
-        style={{
-          margin: "10px",
-          padding: "10px",
-          position: "fixed",
-          top: "40px",
-          width: "calc(100% - 40px)",
-          height: "calc(100% - 80px)",
-          overflow: "hidden"
-        }}
-      >
+      <span>
+        {" "}
         {(() => {
           switch (getState().sessionState) {
             case "authenticated":
@@ -47,7 +40,7 @@ export const Body = Shade({
               return <Init />;
           }
         })()}
-      </div>
+      </span>
     );
   }
 });

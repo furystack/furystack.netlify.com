@@ -1,6 +1,6 @@
 import { Shade, createComponent } from "@furystack/shades";
 import { SessionService } from "../services/session";
-import { Loader } from "../components/loader";
+import { Loader } from "../layout/loader";
 
 export const Login = Shade({
   shadowDomName: "shade-login",
@@ -40,7 +40,7 @@ export const Login = Shade({
         }}
       >
         <style>{`
-          label {
+          shade-login label {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -53,19 +53,19 @@ export const Login = Shade({
             transition: background-color 300ms cubic-bezier(0.455, 0.030, 0.515, 0.955), box-shadow 300ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
           }
 
-          label:focus-within {
+          shade-login label:focus-within {
             background-color: rgba(255,255,255,0.2);
             box-shadow: 0px 0px 5px rgba(0,0,0,.1)
           }
 
-          label input{
+          shade-login label input{
             border: none;
             background-color: transparent;
             outline: none;
             font-size: 12px;
           }
 
-          form.login-form {
+          shade-login form.login-form {
             border: 1px solid #aaa;
             padding: 10px 30px;
             border-radius: 8px;
@@ -73,18 +73,18 @@ export const Login = Shade({
             background-color: rgba(255,255,255,0.4);
           }
 
-          button.login-button {
+          shade-login button.login-button {
             background: rgba(0,0,0,0.05);
             cursor: pointer;
             border: none;
             padding: 12px 20px;
           }
 
-          button.login-button:hover:not(:disabled){
+          shade-login button.login-button:hover:not(:disabled){
             background: rgba(0,0,0,0.25);
           }
 
-          h2 {
+          shade-login h2 {
             color: #444;
             font-weight: lighter;
           }

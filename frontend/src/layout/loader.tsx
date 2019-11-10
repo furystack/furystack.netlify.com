@@ -24,14 +24,14 @@ export const Loader = Shade<{ style?: PartialElement<CSSStyleDeclaration> }>({
         
         #loader-1:before{
           z-index: 100;
-          animation: spin 1s infinite;
+          animation: spinLoader 1s infinite;
         }
         
         #loader-1:after{
           border: 10px solid #ccc;
         }
         
-        @keyframes spin{
+        @keyframes spinLoader{
           0%{
             -webkit-transform: rotate(0deg);
             -ms-transform: rotate(0deg);

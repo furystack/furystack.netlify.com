@@ -1,5 +1,5 @@
 import { Shade, createComponent } from "@furystack/shades";
-import { Loader } from "../components/loader";
+import { Loader } from "../layout/loader";
 
 export const Init = Shade({
   shadowDomName: "shade-init",
@@ -13,7 +13,7 @@ export const Init = Shade({
       }}
     >
       <style>{`
-      @keyframes show{
+      @keyframes showInitLoader{
         0%{
           opacity: 0;
         }
@@ -23,9 +23,9 @@ export const Init = Shade({
         }
       }
 
-      .initLoader {
+      shade-init .initLoader {
         opacity: 0;
-        animation: show .6s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s normal  forwards ;
+        animation: showInitLoader .6s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s normal  forwards ;
       }
       `}</style>
       <div

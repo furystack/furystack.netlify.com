@@ -1,4 +1,6 @@
 import { createComponent, RouteLink, Shade } from "@furystack/shades";
+import github from "../images/gh64.png";
+import furyLogo from "../images/icon.png";
 
 export interface HeaderProps {
   title: string;
@@ -16,20 +18,20 @@ export const Header = Shade<HeaderProps>({
     return (
       <div>
         <style>{`
-        @keyframes show{
+        @keyframes showAppHeader{
           0%{
             padding: 5px 8px;
             opacity: 0;
           }
        
           100%{
-            padding: 8px 8px;
+            padding: 8px 0px;
             opacity: 1;
           }
         }
 
-        #header {
-          animation: show .2s cubic-bezier(0.550, 0.085, 0.680, 0.530) normal  forwards ;
+        shade-app-header #header {
+          animation: showAppHeader .3s cubic-bezier(0.550, 0.085, 0.680, 0.530) normal  forwards ;
         }
 
         `}</style>
@@ -45,11 +47,23 @@ export const Header = Shade<HeaderProps>({
             boxShadow: "0 0 3px rgba(0,0,0,0.6)"
           }}
         >
-          <h3 style={{ margin: "0 2em 0 0", cursor: "pointer" }}>
+          <h3
+            style={{
+              margin: "0 2em 0 0",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              fontWeight: "lighter",
+              fontSize: "28px",
+              fontVariant: "petite-caps"
+            }}
+          >
+            <img src={furyLogo} alt="logo" style={{ margin: "0 0.5em" }} />
             <RouteLink title={props.title} href="/" style={urlStyle}>
               {props.title}
             </RouteLink>
           </h3>
+          <div style={{ flex: "1" }} />
           {props.links.map(link => (
             <RouteLink
               title={link.name}
@@ -59,6 +73,13 @@ export const Header = Shade<HeaderProps>({
               {link.name || ""}
             </RouteLink>
           ))}
+          <a href="https://github.com/furystack" target="_blank">
+            <img
+              src={github}
+              alt="github"
+              style={{ height: "32px", margin: "0 1em 0 0.7em" }}
+            />
+          </a>
         </div>
       </div>
     );

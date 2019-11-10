@@ -16,7 +16,7 @@ export const Offline = Shade({
         }}
       >
         <style>{`
-        @keyframes shake{
+        @keyframes appOfflineShake{
           0% {
             transform: translate(6px, 3px);
           }
@@ -29,7 +29,7 @@ export const Offline = Shade({
         }
 
         #offline {
-          animation: shake 150ms 2 linear;
+          animation: appOfflineShake 150ms 2 linear;
         }
 
         `}</style>

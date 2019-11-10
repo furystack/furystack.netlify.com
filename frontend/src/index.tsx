@@ -2,7 +2,7 @@
 import { PathHelper } from "@sensenet/client-utils";
 import { createComponent, shadeInjector } from "@furystack/shades";
 import { VerboseConsoleLogger } from "@furystack/logging";
-import { Layout } from "./components/layout";
+import { Layout } from "./layout/layout";
 import "@furystack/odata-fetchr";
 
 export const environmentOptions = {

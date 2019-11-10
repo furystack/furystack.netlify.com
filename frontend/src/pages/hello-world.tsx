@@ -17,7 +17,7 @@ export const HelloWorld = Shade({
   render: ({ injector, getState }) => (
     <div>
       <style>{`
-      @keyframes show{
+      @keyframes showHelloWorld{
         0%{
           opacity: 0;
         }
@@ -27,13 +27,13 @@ export const HelloWorld = Shade({
         }
       }
 
-      .initLoader {
+      .helloWorldLoader {
         opacity: 0;
-        animation: show .6s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s normal  forwards ;
+        animation: showHelloWorld .6s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s normal  forwards ;
       }
       `}</style>
       <div
-        className="initLoader"
+        className="helloWorldLoader"
         style={{
           display: "flex",
           flexDirection: "column",
