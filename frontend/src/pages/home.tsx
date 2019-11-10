@@ -133,16 +133,20 @@ export const HomePage = Shade({
       @keyframes showHomeComponent{
         0%{
           opacity: 0;
+          filter: grayscale(1) blur(15px);
+          transform: scale(1.2);
         }
       
         100%{
-          opacity: 1
+          opacity: 1;
+          filter: grayscale(0) blur(0);
+          transform: scale(1);
         }
       }
 
       .homeLoader {
         opacity: 0;
-        animation: showHomeComponent .6s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s normal  forwards ;
+        animation: showHomeComponent .5s cubic-bezier(0.550, 0.085, 0.680, 0.530)  normal  forwards ;
       }
       `}</style>
         <div

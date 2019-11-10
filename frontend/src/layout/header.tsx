@@ -31,7 +31,8 @@ export const Header = Shade<HeaderProps>({
         }
 
         shade-app-header #header {
-          animation: showAppHeader .3s cubic-bezier(0.550, 0.085, 0.680, 0.530) normal  forwards ;
+          opacity: 0;
+          animation: showAppHeader .3s cubic-bezier(0.550, 0.085, 0.680, 0.530) normal .5s forwards ;
         }
 
         `}</style>
