@@ -1,7 +1,7 @@
 name: Cypress
-branding:
-  icon: 'award'  
-  color: 'green'
+  branding:
+    icon: 'award'  
+    color: 'green'
 
 on: [push]
 
