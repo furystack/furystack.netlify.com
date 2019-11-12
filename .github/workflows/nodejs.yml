@@ -1,10 +1,5 @@
 name: Cypress
-  branding:
-    icon: 'award'  
-    color: 'green'
-
-on: [push]
-
+on: [push,gollum]
 jobs:
   build:
       
